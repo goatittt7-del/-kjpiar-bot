@@ -47,8 +47,22 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=keyboard
     )
 async def promotion(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    promotion_menu = [
+        ["📢 Канал", "👥 Группа"],
+        ["👁 Пост", "🤖 Бот"],
+        ["🔥 Реакции", "⚡ Буст"],
+        ["⬅️ Назад"]
+    ]
+
+    keyboard = ReplyKeyboardMarkup(
+        promotion_menu,
+        resize_keyboard=True
+    )
+
     await update.message.reply_text(
         "📢 Что вы хотите рекламировать?",
+        reply_markup=keyboard
+    )
     )
 
 def main():
