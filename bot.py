@@ -63,7 +63,7 @@ async def promotion(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "📢 Что вы хотите рекламировать?",
         reply_markup=keyboard
     )
-    )
+    
 
 def main():
     app = Application.builder().token(TOKEN).build()
